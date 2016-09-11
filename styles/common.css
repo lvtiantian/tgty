@@ -1,0 +1,118 @@
+/*css reset*/
+body,div,p,ul,h1,h2,h3,h4,h5,h6{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.lf{float:left;}
+.rt{float:right;}
+.clear{clear:both;}
+img{
+	vertical-align:bottom;
+}
+/*页面背景设置*/
+body{
+	background:url("../images/bg.png");
+	background-color:rgba(255,255,255,1);
+}
+/*设置宽度、高度*/
+#top,#nav,#banner,#main{
+	width:968px;
+	min-height:20px;
+	margin:0 auto;	
+}
+#footer{
+	width:100%;
+	min-height:20px;
+}
+#top{
+	height:98px;
+}
+
+/*字体设置,公共样式*/
+body{
+	font-size:12px;
+	color:#666;
+}
+a{
+	text-decoration:none;
+	color:#666;
+}
+a:hover{
+	color:#a91100;
+	text-decoration:underline;
+}
+/*header部分*/
+#top img{
+	margin-top:13px;
+}
+#top div{
+	float:right;
+	width:200px;
+	text-align:center;
+	margin-top:30.5px;
+	font:14px "微软雅黑";
+}
+#top div p{
+	line-height:40px;
+}
+#top div a{
+	cursor:pointer;
+}
+/*导航条*/
+#nav{
+	background-image:linear-gradient(to bottom,#a91100,#c11000);
+	border-radius:2px;
+	margin-bottom:10px;
+}
+#nav>ul{	
+	width:807px;
+	overflow:hidden;
+	margin:0 auto;
+}
+#nav>ul>li{
+	float:left;
+	width:100px;	
+	text-align:center;
+	line-height:34px;
+	font-size:14px;
+}
+#nav>ul>li:last-child{
+	border-right:0;
+}
+#nav>ul>li a{
+	color:#fff;
+	text-decoration:none;
+	border-right:1px solid #111622;
+	display:inline-block;
+	height:34px;
+	width:100px;
+	cursor: pointer;
+}
+#nav>ul>li a:hover,#nav>ul>li a.current{
+	background-image:linear-gradient(to bottom,#111622,#415979);
+}
+
+/**走进太工天宇部分*/
+#footer{
+	width:100%;
+	height:100px;
+	background:#e5e5e5;
+}
+#foot_content{
+	width:800px;
+	margin:0 auto;
+	text-align:center;
+	padding-top:10px;
+}
+#foot_content p{
+	line-height:25px;
+}
+#foot_content p a{
+	border-right:1px solid #666;
+	padding:0 10px;
+}
+#foot_content p a:last-child{
+	border-right:0;
+}
