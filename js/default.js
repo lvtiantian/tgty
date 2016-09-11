@@ -5,22 +5,22 @@ $("#header").load("data/header.php",function() {
 $("#footer").load("data/footer.php");
 
 
-window.$=HTMLElement.prototype.$=function(selector){
-    var elems=(this==window?document:this)
-        .querySelectorAll(selector);
-    return elems.length==0?null:elems.length==1?elems[0]:elems;
-}
-HTMLElement.prototype.bind=document.bind=function(eName,fn,capture){
-	this.addEventListener(eName,fn,capture);
-}
-HTMLElement.prototype.css=function(prop,value){
-	if(value===undefined){
-		var style=getComputedStyle(this);
-		return style[prop];
-	}else{
-		this.style[prop]=value;
-	}
-}
+//window.$=HTMLElement.prototype.$=function(selector){
+//    var elems=(this==window?document:this)
+//        .querySelectorAll(selector);
+//    return elems.length==0?null:elems.length==1?elems[0]:elems;
+//}
+//HTMLElement.prototype.bind=document.bind=function(eName,fn,capture){
+//	this.addEventListener(eName,fn,capture);
+//}
+//HTMLElement.prototype.css=function(prop,value){
+//	if(value===undefined){
+//		var style=getComputedStyle(this);
+//		return style[prop];
+//	}else{
+//		this.style[prop]=value;
+//	}
+//}
 
 var imgs=[
 	{i:0,src:"images/banner-01.jpg"},
@@ -43,19 +43,19 @@ var adv={
 		this.LIWIDTH=parseFloat($("#banner").css("width"));
 		this.interval=this.DURATION/this.STEPS;
 		this.updateView();
-		$("#idxs").bind("mouseover",function(e){
-			var target=e.target;
-			if(target.nodeName=="LI"&&target.className!="hover"){
-				var start=$("#idxs .hover").innerHTML;
+		$("#idxs").on("mouseover",'li',function(e){
+			var target=e.target;//target.nodeName=="LI"&&
+			if(target.className!="hover"){
+				var start=$("#idxs .hover")[0].innerHTML;
 				var end=target.innerHTML;
 				this.move(end-start);
 			}
 		}.bind(this));
 		this.autoMove();
-		$("#banner").bind("mouseover",function(){
+		$("#banner").on("mouseover",function(){
 			this.canAuto=false;
 		}.bind(this));
-		$("#banner").bind("mouseout",function(){
+		$("#banner").on("mouseout",function(){
 			this.canAuto=true;
 		}.bind(this));
 	},
@@ -95,10 +95,10 @@ var adv={
 		}
 	},
 	updateView:function(){
-		$("#imgs").innerHTML="";
-		$("#idxs").innerHTML="";
-		//$("#imgs").html("");
-		//$("#idxs").html("");
+		//$("#imgs").innerHTML="";
+		//$("#idxs").innerHTML="";
+		$("#imgs").html("");
+		$("#idxs").html("");
 		var fragImgs=document.createDocumentFragment();
 		var fragIdxs=document.createDocumentFragment();
 		for(var i=0;i<imgs.length;i++){
@@ -114,10 +114,10 @@ var adv={
 			li.innerHTML=i+1;
 			fragIdxs.appendChild(li);
 		}
-		$("#imgs").appendChild(fragImgs);
-		$("#idxs").appendChild(fragIdxs);
-		//$("#imgs").append(fragImgs);
-		//$("#idxs").append(fragIdxs);
+		//$("#imgs").appendChild(fragImgs);
+		//$("#idxs").appendChild(fragIdxs);
+		$("#imgs").append(fragImgs);
+		$("#idxs").append(fragIdxs);
 		$("#imgs").css("width",this.LIWIDTH*imgs.length+"px");
 	}
 }

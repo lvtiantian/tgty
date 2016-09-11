@@ -1,13 +1,16 @@
 #banner{
     overflow: hidden;
+    width:968px;
 }
 #imgs{
+    overflow: hidden;
+    left:0;
     position: relative;
 }
 #imgs li{
     left:0;
     top:0;
-    width: 100%;
+    float:left;
 }
 #idxs{
     overflow: hidden;
@@ -16,9 +19,12 @@
 }
 #idxs li{
     border:2px solid #ddd;
-    width:10px;
-    height:10px;
-    border-radius: 5px;
+    width:8px;
+    height:8px;
+    border-radius: 4px;
     float:left;
     margin: 5px;
+}
+#idxs li:hover,#idxs li.active{
+    border-color:#c11000;
 }

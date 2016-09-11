@@ -12,7 +12,7 @@
 <!--导航条-->
 <nav id="nav">
 	<ul>
-		<li><a href="default.html" class="current ">首&nbsp;页</a></li>
+		<li><a href="index.html" class="current ">首&nbsp;页</a></li>
 		<li id="result">
 			<a href="solution.html">解决方案</a>
 			<!--
