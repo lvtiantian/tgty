@@ -1,0 +1,24 @@
+#banner{
+    overflow: hidden;
+}
+#imgs{
+    position: relative;
+}
+#imgs li{
+    left:0;
+    top:0;
+    width: 100%;
+}
+#idxs{
+    overflow: hidden;
+    float: left;
+    margin-left:460px;
+}
+#idxs li{
+    border:2px solid #ddd;
+    width:10px;
+    height:10px;
+    border-radius: 5px;
+    float:left;
+    margin: 5px;
+}
