@@ -28,3 +28,30 @@
 #idxs li:hover,#idxs li.active{
     border-color:#c11000;
 }
+.left{
+    width:220px;
+}
+.left li:first-child b{
+    float:left;
+    width:27px;
+    height:30px;
+    background: url(../images/iconlist_1.png) no-repeat -39px 0;
+    margin-right: 5px;
+}
+
+.left li{
+    border-bottom: 1px solid #ddd;
+    box-shadow:0px 9px 17px -15px #121D12;
+    padding:8px 0;
+    padding-left:37px;
+}
+.left li:first-child{
+    color: #c11000;
+    font-weight: bold;
+    font-size: 15px;
+    line-height:30px;
+    padding-left:5px;
+}
+.left li a{
+    font-size: 15px;
+}
