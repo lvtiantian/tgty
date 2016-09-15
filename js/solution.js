@@ -42,11 +42,17 @@ var adv={
         this.timer=setInterval(this.movestep.bind(this),this.interval);
     },
     moveAuto:function(){
-        this.timer=setInterval(function(){
+        setInterval(function(){
            this.move();
-            console.log(111);
         }.bind(this),this.WAIT)
     }
 
 }
 adv.init();
+$(".left li:not(:first-child) a").click(function(e){
+    e.preventDefault();
+    $(".right div:not(:first-child)").hide();
+    var i=$(this).parent().index(".left li");
+    $(".right div:first-child span:last-child").html($(this).html());
+    $(".right div:nth-child("+(i+1)+")").show();
+})

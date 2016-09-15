@@ -28,8 +28,13 @@
 #idxs li:hover,#idxs li.active{
     border-color:#c11000;
 }
+#main{
+    overflow: hidden;
+}
 .left{
     width:220px;
+    float:left;
+    border-right: 1px solid #c11000;
 }
 .left li:first-child b{
     float:left;
@@ -40,9 +45,10 @@
 }
 
 .left li{
-    border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd;
+    border-left-color: transparent;
     box-shadow:0px 9px 17px -15px #121D12;
-    padding:8px 0;
+    /*padding:8px 0;*/
     padding-left:37px;
 }
 .left li:first-child{
@@ -52,6 +58,44 @@
     line-height:30px;
     padding-left:5px;
 }
+.left li:not(:first-child):hover,.left li:not(:first-child).hover{
+    border:1px solid #c11000;
+    border-right: 0;
+    background: #fff;
+}
 .left li a{
+    display: inline-block;
+    /*height:34px;*/
+    width:183px;
+    padding:10px 0;
     font-size: 15px;
 }
+.left li:not(:first-child):hover a,.left li:not(:first-child).hover a{
+    background: #fff;
+}
+.left li a:hover{
+    text-decoration: none;
+}
+.right{
+    margin-left:240px;
+}
+.right div:first-child{
+    line-height: 30px;
+    border-bottom:2px solid #c11000;
+}
+.right div:first-child b{
+    display: inline-block;
+    width:11px;
+    height:10px;
+    background:url(../images/iconlist_1.png) no-repeat;
+    margin-top:7px;
+    margin-right:5px;
+}
+.right div:first-child span{
+    font-weight: bold;
+    font-size: 15px;
+}
+.right div:first-child span:last-child{
+    color:#c11000;
+}
+
