@@ -51,8 +51,10 @@ var adv={
 adv.init();
 $(".left li:not(:first-child) a").click(function(e){
     e.preventDefault();
+    $(".left li.hover").removeClass("hover");
+    $(this).parent().addClass("hover");
     $(".right div:not(:first-child)").hide();
     var i=$(this).parent().index(".left li");
-    $(".right div:first-child span:last-child").html($(this).html());
-    $(".right div:nth-child("+(i+1)+")").show();
+    $(".right>div:first-child span:last-child").html($(this).html());
+    $(".right>div:nth-child("+(i+1)+")").show();
 })
