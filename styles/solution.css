@@ -1,33 +1,4 @@
-#banner{
-    overflow: hidden;
-    width:968px;
-}
-#imgs{
-    overflow: hidden;
-    left:0;
-    position: relative;
-}
-#imgs li{
-    left:0;
-    top:0;
-    float:left;
-}
-#idxs{
-    overflow: hidden;
-    float: left;
-    margin-left:460px;
-}
-#idxs li{
-    border:2px solid #ddd;
-    width:8px;
-    height:8px;
-    border-radius: 4px;
-    float:left;
-    margin: 5px;
-}
-#idxs li:hover,#idxs li.active{
-    border-color:#c11000;
-}
+
 #main{
     overflow: hidden;
 }
@@ -35,6 +6,7 @@
     width:220px;
     float:left;
     border-right: 1px solid #c11000;
+    margin-left: 10px;
 }
 .left li:first-child b{
     float:left;
@@ -57,11 +29,11 @@
     font-size: 15px;
     line-height:30px;
     padding-left:5px;
+    border-top:0;
 }
 .left li:not(:first-child):hover,.left li:not(:first-child).hover{
     border:1px solid #c11000;
     border-right: 0;
-    background: #fff;
     box-shadow: none;
 }
 .left li a{
@@ -71,15 +43,23 @@
     padding:10px 0;
     font-size: 15px;
 }
-.left li:not(:first-child):hover a,.left li:not(:first-child).hover a{
-    background: #fff;
-    font-weight: bold;
-}
-.left li a:hover{
+.left li a:hover,.left li.hover a{
     text-decoration: none;
+    background: #fff;
 }
+.left div{
+    text-align: center;
+    margin-top:20px;
+}
+.left div b{
+    font-size: 15px;
+    color:#c11000;
+    float: left;
+    padding-left: 5px;
+}
+
 .right{
-    margin-left:240px;
+    margin-left:250px;
 }
 .right>div{
     display: none;
@@ -129,5 +109,8 @@
     font-size: 15px;
     line-height:20px;
     padding-top:10px;
+}
+.right>div img{
+   margin-left:100px;
 }
 

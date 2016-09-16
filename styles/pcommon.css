@@ -1,0 +1,31 @@
+#banner{
+    overflow: hidden;
+    width:968px;
+}
+#imgs{
+    overflow: hidden;
+    left:0;
+    position: relative;
+}
+#imgs li{
+    left:0;
+    top:0;
+    float:left;
+    width: 968px;
+}
+#idxs{
+    overflow: hidden;
+    float: left;
+    margin-left:460px;
+}
+#idxs li{
+    border:2px solid #ddd;
+    width:8px;
+    height:8px;
+    border-radius: 4px;
+    float:left;
+    margin: 5px;
+}
+#idxs li:hover,#idxs li.active{
+    border-color:#c11000;
+}
