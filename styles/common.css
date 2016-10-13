@@ -4,13 +4,20 @@ body,div,p,ul,h1,h2,h3,h4,h5,h6{
 	padding:0;
 	list-style:none;
 }
-
 .lf{float:left;}
 .rt{float:right;}
 .clear{clear:both;}
 img{
 	vertical-align:bottom;
 }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { border: 0 none; font-family: inherit; font-size: 100%; font-style: inherit; font-weight: inherit; margin: 0; outline: 0 none; padding: 0; }
+:focus { outline: 0 none; }
+table { border-collapse: collapse; border-spacing: 0; }
+caption, th, td { font-weight: normal; text-align: left; }
+a img, iframe { border: medium none; }
+ol, ul { list-style: none outside none; }
+input, textarea, select, button { font-family: inherit; font-size: 100%; }
+body { font-family: "宋体"; font-size: 12px;}
 /*页面背景设置*/
 body{
 	/*background:url("../images/bg.png");*/
@@ -20,7 +27,8 @@ body{
 #top,#nav,#banner,#main{
 	width:968px;
 	min-height:20px;
-	margin:0 auto;	
+	margin:0 auto;
+	text-align: center;
 }
 #footer{
 	width:100%;
